@@ -10,6 +10,30 @@
 </h:head>
 <h:body bgcolor="white">
 	<h1>Google App Engine + JSF 2.0 example - welcome.xhtml</h1>
-	<h4>Welcome #{helloBean.name}</h4>
+	<h4>Welcome #{helloBean.formattedName}</h4>
+	
+	<p>
+		<h:dataTable value="#{helloBean.allEntries}" var="o">
+    			<h:column>
+    				<f:facet name="header">Author</f:facet>
+    				#{o.author}
+    			</h:column>
+ 
+    			<h:column>
+    				<f:facet name="header">Description</f:facet>
+    				#{o.description}
+    			</h:column>
+ 
+    			<h:column>
+    				<f:facet name="header">Summary</f:facet>
+    				#{o.summary}
+    			</h:column>
+ 
+    			<h:column>
+    				<f:facet name="header">URL</f:facet>
+    				#{o.url}
+    			</h:column>		
+		</h:dataTable>
+	</p>	
 </h:body>
 </html>
