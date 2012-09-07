@@ -37,20 +37,20 @@ public class Todo {
 		this.author = author;
 	}
 
-	public String getShortDescription() {
+	public String getSummary() {
 		return summary;
 	}
 
-	public void setShortDescription(String shortDescription) {
-		this.summary = shortDescription;
+	public void setSummary(String summary) {
+		this.summary = summary;
 	}
 
-	public String getLongDescription() {
+	public String getDescription() {
 		return description;
 	}
 
-	public void setLongDescription(String longDescription) {
-		this.description = longDescription;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public String getUrl() {

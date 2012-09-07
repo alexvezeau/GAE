@@ -11,7 +11,26 @@
 <h:body>
 	<h1>Google App Engine + JSF 2.0 example - hello.xhtml</h1>
 	<h:form>
-		<h:inputText value="#{helloBean.name}"></h:inputText>
+		<h:panelGroup>
+			<h:outputLabel id="nameLabel" for="name" value="Name: " />
+			<h:inputText value="#{helloBean.name}" id="name"/>
+		</h:panelGroup>
+		
+		<h:panelGroup>
+			<h:outputLabel id="nameDesc" for="desc" value="Description: " />
+			<h:inputText value="#{helloBean.description}" id="desc"/>
+		</h:panelGroup>
+		
+		<h:panelGroup>
+			<h:outputLabel id="summaryDesc" for="summary" value="Summary: " />
+			<h:inputText value="#{helloBean.summary}" id="summary"/>
+		</h:panelGroup>	
+
+		<h:panelGroup>
+			<h:outputLabel id="urlDesc" for="url" value="URL: " />
+			<h:inputText value="#{helloBean.url}" id="url"/>
+		</h:panelGroup>	
+				
 		<h:commandButton value="Welcome Me" action="welcome"></h:commandButton>
 	</h:form>
 	

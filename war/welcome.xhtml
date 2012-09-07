@@ -13,7 +13,8 @@
 	<h4>Welcome #{helloBean.formattedName}</h4>
 	
 	<p>
-		<h:dataTable value="#{helloBean.allEntries}" var="o">
+    		<h:dataTable value="#{helloBean.names}" var="o">
+ 
     			<h:column>
     				<f:facet name="header">Author</f:facet>
     				#{o.author}
@@ -32,8 +33,9 @@
     			<h:column>
     				<f:facet name="header">URL</f:facet>
     				#{o.url}
-    			</h:column>		
-		</h:dataTable>
+    			</h:column>
+ 
+    		</h:dataTable>
 	</p>	
 </h:body>
 </html>
